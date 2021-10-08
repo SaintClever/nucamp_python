@@ -1,6 +1,12 @@
 from donations_pkg.homepage import show_homepage, donate, show_donations
 from donations_pkg.user import login, register
 
+'''
+or
+from donations_pkg import homepage, user
+homepage.show_hompage, homepage.donate, show_donations.homepage
+user.login, user.register
+'''
 
 database = {'admin': 'password123'}
 donations = []
@@ -29,7 +35,8 @@ while True:
         password = input('password: ')
         authorized_user = register(database, username)
 
-        if authorized_user != ' ':  # MUST not be an EMPTY string TODO: add authorized_user != 0
+        # MUST not be an EMPTY string TODO: add len(authorized_user) >= 0
+        if authorized_user != ' ':
             database[username] = password
 
     elif user_option == '3':

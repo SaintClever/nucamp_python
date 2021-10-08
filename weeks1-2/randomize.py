@@ -18,3 +18,10 @@ print("You turn the wheel of fortune... It lands on a prize of", prize_won + "!!
 cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 random.shuffle(cards)
 print(cards)
+
+# randomize a dict
+d = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+l = list(d.items())
+random.shuffle(l)
+d = dict(l)
+print(d)
