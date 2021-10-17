@@ -50,8 +50,9 @@ class User:
 
 class BankUser(User):
     '''
-    BankUser Subclass:
-        of User class
+    BankUser subclass:
+    ------------------
+        Subclass of User class
 
     Returns:
         show_balance(self)
